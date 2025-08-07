@@ -81,6 +81,8 @@ nav {
 .left, .right {
     display: flex;
     gap: 50px;
+    width: 100%;
+    justify-content: center;
 }
 
 .item {
@@ -101,12 +103,14 @@ nav {
     padding: 5% 10%;
     gap: 40px;
     color: hsl(0, 0%, 100%);
+    justify-content: center;
 }
 section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    
     h1 {
         font-size: 2.5rem;
     }
@@ -114,8 +118,10 @@ section {
         line-height: 25px;
     }
     a {
+        display: flex;
         color: hsl(176, 68%, 64%);
         text-underline-offset: 8px;
+        align-items: center;
     }
 }
 
@@ -212,10 +218,123 @@ footer {
     display: flex;
     background-color: hsl(216, 53%, 9%);
     color: hsl(0, 0%, 100%);
-    padding: 10% 5% 5% 5%;
+    padding: 10% 7% 5% 7%;
+    justify-content: space-between  ;
+
+}
+.logo {
+    width: 30%; 
+}
+.detail {
+    display: flex;
+    img {
+        width: 25px;
+        height: 25px;
+        margin-right: 20px;
+    }
+}
+.contact {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
+}
+.phone {
+    display: flex;
+    gap: 20px;
+}
+
+.email-con {
+    display: flex;
+    gap: 20px;
+}
+
+.about-us, .contact-us {
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .hed {
+        font-size: 1rem;
+    }
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.credit {
+    display: flex;
     justify-content: center;
-    .logo {
-        width: 30%;
+}
+
+@media screen and (max-width: 875px) {
+    .productive {
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 100%;
+        }
+        a img {
+            width: 30px;
+        }
+    }
+        footer {
+        flex-direction: column;
+        justify-content: start ;
+        gap: 20px;
+        .logo {
+            width: 100%; 
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 575px) {
+    nav {
+        padding: 15px;
+        ul{
+            li {
+                margin-left: 20px;
+            }
+        }
+    }
+    .hero {
+    background-image: url("./images/bg-curvy-mobile.svg");
+    padding: 5%;
+    gap: 15px;
+    }
+    .left, .right {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        .box {
+            margin: 0;
+        }
+    }
+    form {
+            flex-direction: column;
+            align-items: center;
+            
+        }
+    .email {
+        button {
+           width: 100%;
+        }
+    }
+    .social {
+        justify-content: center;
     }
 }
